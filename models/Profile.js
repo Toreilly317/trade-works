@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Create Schema
@@ -10,14 +10,13 @@ const ProfileSchema = new Schema({
   handle: {
     type: String,
     required: true,
-    unique: true,
-    max: 40,
+    max: 40
   },
   company: {
     type: String
   },
   website: {
-    type: String,
+    type: String
   },
   location: {
     type: String
@@ -33,7 +32,7 @@ const ProfileSchema = new Schema({
   bio: {
     type: String
   },
-  githubUsername: {
+  githubusername: {
     type: String
   },
   experience: [{
@@ -46,14 +45,14 @@ const ProfileSchema = new Schema({
       required: true
     },
     location: {
-      type: String,
+      type: String
     },
     from: {
       type: Date,
       required: true
     },
     to: {
-      type: Date,
+      type: Date
     },
     current: {
       type: Boolean,
@@ -62,7 +61,7 @@ const ProfileSchema = new Schema({
     description: {
       type: String
     }
-  }, ],
+  }],
   education: [{
     school: {
       type: String,
@@ -72,7 +71,7 @@ const ProfileSchema = new Schema({
       type: String,
       required: true
     },
-    fieldOfStudy: {
+    fieldofstudy: {
       type: String,
       required: true
     },
@@ -81,7 +80,7 @@ const ProfileSchema = new Schema({
       required: true
     },
     to: {
-      type: Date,
+      type: Date
     },
     current: {
       type: Boolean,
@@ -90,23 +89,23 @@ const ProfileSchema = new Schema({
     description: {
       type: String
     }
-  }, ],
+  }],
   social: {
     youtube: {
-      type: String,
+      type: String
     },
     twitter: {
-      type: String,
+      type: String
     },
     facebook: {
-      type: String,
+      type: String
     },
-    linkedIn: {
-      type: String,
+    linkedin: {
+      type: String
     },
     instagram: {
-      type: String,
-    },
+      type: String
+    }
   },
   date: {
     type: Date,
@@ -114,4 +113,4 @@ const ProfileSchema = new Schema({
   }
 });
 
-module.exports = Profile = mongoose.model("profiles", ProfileSchema);
+module.exports = Profile = mongoose.model('profile', ProfileSchema);
