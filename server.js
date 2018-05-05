@@ -19,6 +19,8 @@ app.use(bodyParser.json());
 //DB Config
 const db = process.env.MONGO_URI;
 
+
+
 //Conect to mongoDB
 mongoose
   .connect(db)
